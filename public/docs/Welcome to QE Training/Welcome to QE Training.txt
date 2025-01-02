@@ -1,1 +1,6 @@
+<img src="https://www.chanty.com/blog/wp-content/uploads/2017/02/collaboration_benefits.png">
+Welcome to the Training Website! This site provides all the resources you'll need to successfully complete your training. Browse the topics below to access documentation, tutorials, and other helpful materials.
 
+<a href="http://localhost:3000/doc?id=How%20to%20Create%20Training%20Documents">How to Create Training Documents</a>
+
+<!-- title:Welcome to QE Training -->
