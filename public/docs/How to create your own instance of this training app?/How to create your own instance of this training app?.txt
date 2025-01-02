@@ -10,6 +10,7 @@ This application is written using a single NodeJS script. A public directory. Ne
 <code>mkdir -p public/docs</code>
 
 <b>Step 2 - Initialize NodeJS environment.</b> 
+
 <code>npm init -y; npm install Express</code>
 
 <b>Step 3 - Create index.js script.</b>
