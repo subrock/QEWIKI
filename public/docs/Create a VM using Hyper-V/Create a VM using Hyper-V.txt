@@ -1,0 +1,61 @@
+There are two main ways to create a VM using Hyper-V: using the New Virtual Machine Wizard in Hyper-V Manager, or using Hyper-V Quick Create. Here's a breakdown of both methods:   
+
+<h4>Method 1: Using the New Virtual Machine Wizard</h4>
+This method offers more granular control over the VM's settings.
+
+1. Open Hyper-V Manager: Search for "Hyper-V Manager" in the Windows search bar and open it.   
+2. Start the Wizard: In the Actions pane (usually on the right), click "New" and then "Virtual Machine." This launches the New Virtual Machine Wizard.   
+3. Before You Begin: Read the information on the first screen and click "Next."   
+4. Specify Name and Location:
+5. Give your virtual machine a descriptive name.   
+6. Choose a location to store the VM files. The default location is usually fine, but you can change it if needed. Click "Next."   
+
+<strong>Specify Generation:</strong>
+
+Generation 1: Supports older operating systems and has broader compatibility with physical hardware.   
+Generation 2: Supports newer operating systems (like Windows 8.1 and later, and newer Linux distributions) and offers features like UEFI firmware, Secure Boot, and virtual SCSI controllers. Choose the generation that's appropriate for the guest operating system you plan to install. Click "Next."   
+
+<strong>Assign Memory:</strong>
+
+Allocate RAM to the VM. Be mindful of your host computer's resources. You can enable "Use Dynamic Memory" to allow Hyper-V to dynamically adjust the VM's memory usage. Click "Next."   
+
+<strong>Configure Networking:</strong>
+
+Connect the VM to a virtual switch to give it network access. If you haven't created a virtual switch yet, you can do so in Hyper-V Manager before starting this process. Click "Next."   
+
+<strong>Connect Virtual Hard Disk:</strong>
+
+Create a virtual hard disk: Choose this option to create a new virtual hard disk file for the VM. Specify the size and location of the disk.   
+
+Use an existing virtual hard disk: Choose this option if you have a pre-existing VHD or VHDX file that you want to use.   
+Attach a virtual hard disk later: Choose this if you want to add a hard disk later. Click "Next."
+Installation Options:
+Install an operating system from a bootable CD/DVD or ISO image file: Choose this and browse to the ISO file of your operating system.
+Install an operating system from a network-based installation server: Choose this if you're installing from a network source.
+Install an operating system later: Choose this if you want to install the OS later. Click "Next."
+Summary: Review the settings you've chosen and click "Finish" to create the VM.
+
+<h4>Method 2: Using Hyper-V Quick Create</h4>
+This is a simpler and faster method for creating basic VMs.
+
+Open Hyper-V Quick Create: Search for "Hyper-V Quick Create" in the Windows search bar and open it.
+Choose an Operating System or Installation Source:
+Quick Create offers a list of pre-configured VMs with popular operating systems. You can select one of these.   
+Alternatively, you can choose "Local installation source" to use an ISO file or a VHD/VHDX file.   
+Configure Options (Optional): Click "More options" in the lower right corner to:
+Change the name of the VM.
+Select a virtual switch.
+Create the VM: Click "Create Virtual Machine."
+After Creating the VM
+
+Connect to the VM: In Hyper-V Manager, right-click on the VM and select "Connect." This opens the Virtual Machine Connection window.   
+Start the VM: In the Virtual Machine Connection window, click the "Start" button.   
+Install the Operating System: The VM will boot from the installation media you provided (ISO or physical media). Follow the on-screen prompts to install the operating system.   
+Important Notes:
+
+Hyper-V Requirements: Make sure your system meets the requirements for Hyper-V. You need a 64-bit version of Windows Pro, Enterprise, or Education, with Second Level Address Translation (SLAT) and virtualization enabled in the BIOS/UEFI settings.   
+Virtual Switch: You'll likely need to create a virtual switch in Hyper-V Manager to give your VMs network access.
+Licensing: You need a valid license for any operating system you install in a virtual machine.   
+
+
+<code style="color: red;">Next time go here.</code>

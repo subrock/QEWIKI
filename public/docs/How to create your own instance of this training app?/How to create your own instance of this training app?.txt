@@ -1,0 +1,37 @@
+This application is written using a single NodeJS script. A public directory. New documents can be created using the 'New Document' document.
+
+<b>Prerequisites:</b>
+
+<li> NodeJS is installed 
+<li> File system permissions 
+
+<b>Step 1 - Create directory structure.</b>
+
+<code>mkdir -p public/docs</code>
+
+<b>Step 2 - Initialize NodeJS environment.</b> 
+<code>npm init -y; npm install Express</code>
+
+<b>Step 3 - Create index.js script.</b>
+
+<a target=_blank href=/content?filename=index.js>Download Latest</a>
+
+<b>Step 4 - Create 'New Document' document.</b>
+
+<code>mkdir -p 'public/docs/New Document'</code>
+
+<code>vi 'public/docs/New Document/New Document.txt'</code>
+
+<a target=_blank href="/content?filename=public/docs/New%20Document/New%20Document.txt">Download Latest</a>
+
+<b>Step 5 - Enable SSL Encryption (Optional) </b>
+
+At PSJH we have two certificate athorities. One for use on the public internet. One for use at PSJH. See pki.providence.org site for more information on generating the certs themselves. 
+
+<code>https.createServer({
+        key: fs.readFileSync("certs/mysite.providence.org.key"),
+        cert: fs.readFileSync("certs/mysite.providence.org.crt")
+}, app).listen(443);</code>
+
+
+<!-- how-to:How to create your own instance of this training app? -->

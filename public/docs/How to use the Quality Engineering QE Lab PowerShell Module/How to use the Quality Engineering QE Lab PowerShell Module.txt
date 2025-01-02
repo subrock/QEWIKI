@@ -1,0 +1,17 @@
+The Quality Engineering PowerShell Module for the QE Lab management tool set is available to anyone with permissions to any VMware ESXi Cluster. 
+
+1. Connect to vCenter by typing this command; <code>qe-connect</code>. Then hit Enter. 
+
+<code>qe-connect</code>
+
+to enable certs
+
+<code style="color: #566573;">https.createServer({
+        key: fs.readFileSync("/etc/letsencrypt/live/subrock.com/privkey.pem"),
+        cert: fs.readFileSync("/etc/letsencrypt/live/subrock.com/fullchain.pem")
+}, app).listen(443);
+</code>
+
+
+
+<!-- how-to:How to use the Quality Engineering QE Lab PowerShell Module -->

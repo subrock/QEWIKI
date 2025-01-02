@@ -1,10 +1,64 @@
-To create a new document, simply enter a new title and body. To update an existing document, enter the existing title and updated body. If not sure the title, you can search above or go to the <a href=catalog/>Document Catalog</a>.
- 
+<style>
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #fdf2e9;
+}
+
+pre {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+      zheight: 570px;
+      zwidth=100%;
+    ioverflow-y: scroll;
+    white-space: pre-wrap;
+word-wrap: break-word;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #000000;
+}
+
+}
+
+code {
+  font-family: MyFancyCustomFont, monospace;
+  font-size: inherit;
+}
+
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+  background: #ffeff0;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: .1rem .3rem .2rem;
+  border-radius: .2rem;
+}
+
+
+</style>
+
+</body>
 Enter document title:
 <input type=text class="form-control" id=filename value="">
+
 Enter document body:
 <textarea class="form-control" id="editor" rows="3"></textarea>
-<button class="btn btn-primary mb-2" id="saveButton">Save</button>
+<button id="saveButton">Save</button>
+
     <script>
         const editor = document.getElementById('editor');
         const saveButton = document.getElementById('saveButton');

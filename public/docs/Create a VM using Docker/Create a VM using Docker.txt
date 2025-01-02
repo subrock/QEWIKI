@@ -1,0 +1,62 @@
+<img width=150 src="https://www.zadara.com/wp-content/uploads/docker.png">
+You can't directly create a full Windows workstation VM using Docker in the same way you create Linux containers. Docker relies on the host OS kernel, and Windows and Linux kernels are fundamentally different. Docker Desktop on Windows uses a virtual machine (Hyper-V or WSL 2) under the hood to run Linux containers.   
+
+However, you can run Windows Server containers using Docker on Windows. These are designed for running server applications, not providing a full desktop experience.   
+
+Here's a breakdown of the differences and how to run Windows Server containers:
+
+Why not a full Windows Workstation VM with Docker?
+
+Kernel Dependency: Docker containers share the host OS kernel. A Windows container needs a Windows kernel, and a Linux container needs a Linux kernel. You can't run a full Windows desktop environment (which requires a complete kernel and all its associated services) within a container that's fundamentally based on a different kernel.   
+Purpose of Docker: Docker is designed for isolating applications and their dependencies, not for creating full virtual machines. VMs provide a complete virtualized hardware environment, while containers share the host OS kernel and are much more lightweight.
+Running Windows Server Containers (the closest you can get):
+
+Install Docker Desktop for Windows: Make sure you have Docker Desktop installed and configured to use Windows containers. You'll need Windows 10/11 Professional or Enterprise with Hyper-V enabled, or Windows 10/11 Home with WSL 2.   
+
+Switch to Windows Containers: In the Docker Desktop system tray icon, right-click and select "Switch to Windows containers...".   
+
+Use a Windows Server Base Image: You'll use a Windows Server Core or Nano Server base image. These are minimal Windows Server installations suitable for running applications.
+
+Windows Server Core: This is the more common choice, providing a command-line interface and supporting most server roles.
+Nano Server: This is an even smaller, headless installation designed for cloud-native applications.
+Example Dockerfile (Windows Server Core):
+<code>
+# Install IIS (example)
+RUN powershell -Command Install-WindowsFeature -name Web-Server
+
+# Copy your application
+COPY . /app
+
+# Set the working directory
+WORKDIR /app
+
+# Expose a port
+EXPOSE 80
+
+# Start IIS
+CMD ["powershell", "-Command", "Start-Service W3SVC"]
+</code>
+
+Build and Run the Container:
+
+<code>docker build -t my-windows-app .
+docker run -d -p 80:80 my-windows-app</code>
+
+Key Considerations for Windows Containers:
+
+Image Size: Windows container images tend to be significantly larger than Linux container images.   
+Licensing: Ensure you have the appropriate Windows Server licenses for running Windows containers in production.
+Performance: Windows containers generally have a higher overhead than Linux containers.
+Alternatives for a Windows Workstation Experience:
+
+If you need a full Windows desktop experience, you should use traditional virtualization solutions like:
+
+Hyper-V: Built into Windows Professional and Enterprise.   
+VMware Workstation Player/Pro: A popular commercial virtualization platform.
+VirtualBox: A free and open-source virtualization platform.   
+These tools allow you to create and run full Windows VMs with a graphical desktop environment.
+
+In summary, you can't use Docker to create a full Windows workstation VM. You can run Windows Server containers, but these are designed for server applications, not desktop use. For a full Windows desktop experience, use traditional virtualization solutions.
+
+
+<!-- title:Create a VM using Docker -->

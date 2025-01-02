@@ -1,0 +1,3 @@
+To create a new document, simply go <a href=http://localhost:3000/doc?id=New%20Document>here</a>. To modify a document ssh to the server for now. 
+
+<!-- how-to:How to Create Training Documents --> 

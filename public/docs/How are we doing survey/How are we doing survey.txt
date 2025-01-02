@@ -1,0 +1,71 @@
+At [Your Company/Organization], we're committed to providing the best possible experience. We value your feedback and would appreciate you taking a few minutes to complete this short survey. Your responses will help us understand what we're doing well and where we can improve.
+
+<b>Overall, how satisfied are you with our [product/service]?</b><br>
+        <input type="radio" id="os1" name="overallSatisfaction" value="1"> <label for="os1">Very Dissatisfied</label><br>
+        <input type="radio" id="os2" name="overallSatisfaction" value="2"> <label for="os2">Dissatisfied</label><br>
+        <input type="radio" id="os3" name="overallSatisfaction" value="3"> <label for="os3">Neutral</label><br>
+        <input type="radio" id="os4" name="overallSatisfaction" value="4"> <label for="os4">Satisfied</label><br>
+        <input type="radio" id="os5" name="overallSatisfaction" value="5"> <label for="os5">Very Satisfied</label>
+
+<b>How likely are you to recommend our [product/service] to a friend or colleague?</b>
+
+<select id="recommendation" name="recommendation">
+            <option value="1">Not at all likely</option>
+            <option value="2">Slightly likely</option>
+            <option value="3">Moderately likely</option>
+            <option value="4">Very likely</option>
+            <option value="5">Extremely likely</option>
+        </select>
+
+<b>Product/Service Quality</b>
+        <table width=600 cellpadding=2 cellspacing=0 border=0>
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Very Poor</th>
+                    <th>Poor</th>
+                    <th>Neutral</th>
+                    <th>Good</th>
+                    <th>Very Good</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quality</td>
+                    <td><input type="radio" name="quality" value="1"></td>
+                    <td><input type="radio" name="quality" value="2"></td>
+                    <td><input type="radio" name="quality" value="3"></td>
+                    <td><input type="radio" name="quality" value="4"></td>
+                    <td><input type="radio" name="quality" value="5"></td>
+                </tr>
+                <tr>
+                    <td>Ease of Use</td>
+                    <td><input type="radio" name="easeOfUse" value="1"></td>
+                    <td><input type="radio" name="easeOfUse" value="2"></td>
+                    <td><input type="radio" name="easeOfUse" value="3"></td>
+                    <td><input type="radio" name="easeOfUse" value="4"></td>
+                    <td><input type="radio" name="easeOfUse" value="5"></td>
+                </tr>
+                 <tr>
+                    <td>Value for Money</td>
+                    <td><input type="radio" name="value" value="1"></td>
+                    <td><input type="radio" name="value" value="2"></td>
+                    <td><input type="radio" name="value" value="3"></td>
+                    <td><input type="radio" name="value" value="4"></td>
+                    <td><input type="radio" name="value" value="5"></td>
+                </tr>
+                <tr>
+                    <td>Reliability</td>
+                    <td><input type="radio" name="reliability" value="1"></td>
+                    <td><input type="radio" name="reliability" value="2"></td>
+                    <td><input type="radio" name="reliability" value="3"></td>
+                    <td><input type="radio" name="reliability" value="4"></td>
+                    <td><input type="radio" name="reliability" value="5"></td>
+                </tr>
+            </tbody>
+        </table>
+
+<button class="btn btn-primary mb-2" id="saveButton">Submit Survey</button>
+
+<!-- survey:How are we doing survey -->
+
