@@ -1,1 +1,32 @@
+To create a new document, simply enter a new title and body. To update an existing document, enter the existing title and updated body. If not sure the title, you can search above or go to the <a href=catalog/>Document Catalog</a>.
+ 
+Enter document title:
+<input type=text class="form-control" id=filename value="">
+Enter document body:
+<textarea class="form-control" id="editor" rows="3"></textarea>
+<button class="btn btn-primary mb-2" id="saveButton">Save</button>
+    <script>
+        const editor = document.getElementById('editor');
+        const saveButton = document.getElementById('saveButton');
+        const filenameInput = document.getElementById('filename');
 
+
+saveButton.addEventListener('click', () => {
+            const filename = filenameInput.value;
+            fetch('/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `content=${encodeURIComponent(editor.value)}&filename=${encodeURIComponent(filename)}`,
+            })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message);
+                });
+        });
+
+
+    </script>
+
+</body>
