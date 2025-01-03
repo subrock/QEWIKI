@@ -27,7 +27,7 @@ This application is written using a single NodeJS script. A public directory. Ne
 
 <b>Step 5 - Enable SSL Encryption (Optional) </b>
 
-At PSJH we have two certificate athorities. One for use on the public internet. One for use at PSJH. See pki.providence.org site for more information on generating the certs themselves. 
+At PSJH we have two certificate athorities. One for use on the public internet. One for use at PSJH. 
 
 <code>https.createServer({
         key: fs.readFileSync("certs/mysite.providence.org.key"),
